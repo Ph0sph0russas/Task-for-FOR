@@ -1,33 +1,46 @@
 ﻿namespace Task2
 {
-    internal class Program
+    public class Logic
     {
-        static void Main(string[] args)
+        public static int monthOfIncrease(double a, double b)
         {
-            int a = int.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
-
             int answerTaskA = 0;
-            double aForTaskA = a;
+            
             double sumDeposit = 0;
-            for (int i = 2; sumDeposit < b; sumDeposit = aForTaskA * 0.02)
+            for (int i = 2; sumDeposit < b; sumDeposit = a * 0.02)
             {
                 answerTaskA = i;
                 i = i + 1;
-                aForTaskA = aForTaskA * 1.02;
+                a = a * 1.02;
             }
-
-            Console.WriteLine("Ответ под а)" + answerTaskA);
-
-            double aForTaskB = a;
+            return answerTaskA;
+        }
+        public static int monthOfDeposit(double a, int c)
+        {
+            
             int answerTaskB = 0;
-            for (int i = 1; aForTaskB < c; aForTaskB = aForTaskB * 1.02)
+            for (int i = 1; a < c; a = a * 1.02)
             {
                 answerTaskB = i;
                 i = i + 1;
 
             }
+            return answerTaskB;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double a = int.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            int answerTaskA = Logic.monthOfIncrease(a, b);
+            int answerTaskB = Logic.monthOfDeposit(a, c);
+            
+
+            Console.WriteLine("Ответ под а)" + answerTaskA);
             Console.WriteLine("Ответ под б)" + answerTaskB);
         }
     }
