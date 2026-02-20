@@ -4,10 +4,10 @@
     {
         public static int monthOfIncrease(double a, double b)
         {
-            int answerTaskA = 0;
+            int answerTaskA = 1;
             
-            double sumDeposit = 0;
-            for (int i = 2; sumDeposit < b; sumDeposit = a * 0.02)
+            double sumDeposit = a*0.02;
+            for (int i = 2; sumDeposit <= b; sumDeposit = a * 0.02)
             {
                 answerTaskA = i;
                 i = i + 1;
@@ -19,7 +19,7 @@
         {
             
             int answerTaskB = 0;
-            for (int i = 1; a < c; a = a * 1.02)
+            for (int i = 1; a <= c; a = a * 1.02)
             {
                 answerTaskB = i;
                 i = i + 1;
