@@ -17,7 +17,7 @@
                 i = i + 1;
                 aForTaskA = aForTaskA * 1.02;
             }
-            Console.WriteLine(sumDeposit);
+
             Console.WriteLine("Ответ под а)" + answerTaskA);
 
             double aForTaskB = a;
