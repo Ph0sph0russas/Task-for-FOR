@@ -4,25 +4,26 @@
     {
         public static int monthOfIncrease(double a, double b)
         {
-            int answerTaskA = 1;
-            
-            double sumDeposit = a*0.02;
-            for (int i = 2; sumDeposit <= b; sumDeposit = a * 0.02)
+            int answerTaskA = 0;
+
+            double sumDeposit = 0;
+            for (int i = 0; sumDeposit <= b; a = a * 1.02)
             {
-                answerTaskA = i;
+                
+                sumDeposit = a * 0.02;
                 i = i + 1;
-                a = a * 1.02;
+                answerTaskA = i;
             }
             return answerTaskA;
         }
-        public static int monthOfDeposit(double a, int c)
+        public static int monthOfDeposit(double a, double c)
         {
             
             int answerTaskB = 0;
-            for (int i = 1; a <= c; a = a * 1.02)
+            for (int i = 0; a <= c; a = a * 1.02)
             {
-                answerTaskB = i;
                 i = i + 1;
+                answerTaskB = i;
 
             }
             return answerTaskB;
@@ -34,7 +35,7 @@
         {
             double a = int.Parse(Console.ReadLine());
             double b = double.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
+            double c = int.Parse(Console.ReadLine());
 
             int answerTaskA = Logic.monthOfIncrease(a, b);
             int answerTaskB = Logic.monthOfDeposit(a, c);
