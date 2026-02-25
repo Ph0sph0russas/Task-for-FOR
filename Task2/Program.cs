@@ -2,7 +2,7 @@
 {
     public class Logic
     {
-        public static int monthOfIncrease(double a, double b)
+        public static int getMonthOfExceededIncrease(double a, double b)
         {
             int answerTaskA = 0;
 
@@ -16,7 +16,7 @@
             }
             return answerTaskA;
         }
-        public static int monthOfDeposit(double a, double c)
+        public static int getMonthOfExceededDeposit(double a, double c)
         {
             
             int answerTaskB = 0;
@@ -28,6 +28,13 @@
             }
             return answerTaskB;
         }
+        public static string calculateDepositInfo(double initialSum, double maxIncrease, double maxDeposit)
+        {
+            int answerTaskA=Logic.getMonthOfExceededIncrease(initialSum, maxIncrease);
+            int answerTaskB=Logic.getMonthOfExceededDeposit(initialSum, maxDeposit);
+            string messageAnswers = "Ответ под а)" + answerTaskA + "\n" + "Ответ под б)" + answerTaskB; 
+            return messageAnswers;
+        }
     }
     internal class Program
     {
@@ -37,12 +44,9 @@
             double b = double.Parse(Console.ReadLine());
             double c = int.Parse(Console.ReadLine());
 
-            int answerTaskA = Logic.monthOfIncrease(a, b);
-            int answerTaskB = Logic.monthOfDeposit(a, c);
-            
+            string messageAnswers=Logic.calculateDepositInfo(a, b, c);
 
-            Console.WriteLine("Ответ под а)" + answerTaskA);
-            Console.WriteLine("Ответ под б)" + answerTaskB);
+            Console.WriteLine(messageAnswers);
         }
     }
 }
