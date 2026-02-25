@@ -66,7 +66,7 @@ namespace Task2.Tests
         }
 
         [TestMethod()]
-        public void defaultTest()
+        public void defaultTestAllInOne()
         {
             double initialSum = 1000;
             double maxIncrease = 25;
@@ -77,7 +77,7 @@ namespace Task2.Tests
         }
 
         [TestMethod()]
-        public void closeDistanceTest()
+        public void closeDistanceTestAllInOne()
         {
             double initialSum = 10000;
             double maxIncrease = 100;
@@ -88,7 +88,7 @@ namespace Task2.Tests
         }
 
         [TestMethod()]
-        public void farDistanceTest()
+        public void farDistanceTestAllInOne()
         {
             double initialSum = 10000;
             double maxIncrease = 10000;
