@@ -40,11 +40,11 @@
     {
         static void Main(string[] args)
         {
-            double a = int.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
-            double c = int.Parse(Console.ReadLine());
+            double initialSum = double.Parse(Console.ReadLine());
+            double maxIncrease = double.Parse(Console.ReadLine());
+            double maxDeposit = double.Parse(Console.ReadLine());
 
-            string messageAnswers=Logic.calculateDepositInfo(a, b, c);
+            string messageAnswers=Logic.calculateDepositInfo(initialSum, maxIncrease, maxDeposit);
 
             Console.WriteLine(messageAnswers);
         }
