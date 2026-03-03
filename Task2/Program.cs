@@ -2,25 +2,25 @@
 {
     public class Logic
     {
-        public static int getMonthOfExceededIncrease(double a, double b)
+        public static int getMonthOfExceededIncrease(double initialSum, double maxIncrease)
         {
             int answerTaskA = 0;
 
             double sumDeposit = 0;
-            for (int i = 0; sumDeposit <= b; a = a * 1.02)
+            for (int i = 0; sumDeposit <= maxIncrease; initialSum = initialSum * 1.02)
             {
                 
-                sumDeposit = a * 0.02;
+                sumDeposit = initialSum * 0.02;
                 i = i + 1;
                 answerTaskA = i;
             }
             return answerTaskA;
         }
-        public static int getMonthOfExceededDeposit(double a, double c)
+        public static int getMonthOfExceededDeposit(double initialSum, double maxDeposit)
         {
             
             int answerTaskB = 0;
-            for (int i = 0; a <= c; a = a * 1.02)
+            for (int i = 0; initialSum <= maxDeposit; initialSum = initialSum * 1.02)
             {
                 i = i + 1;
                 answerTaskB = i;
